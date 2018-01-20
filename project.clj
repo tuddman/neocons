@@ -1,4 +1,4 @@
-(defproject tuddman/neocons "3.2.1-SNAPSHOT"
+(defproject clojurewerkz/neocons "3.3.0-SNAPSHOT"
   :description "Neocons is a feature rich idiomatic Clojure client for the Neo4J REST API. It also supports Bolt protocol."
   :url "http://clojureneo4j.info"
   :license {:name "Eclipse Public License"}
@@ -37,17 +37,15 @@
   :source-paths ["src/clojure"]
   :profiles       {:1.8 {:dependencies [[org.clojure/clojure "1.8.0"]]}
 
-                   :master {:dependencies [[org.clojure/clojure "1.9.0-master-SNAPSHOT"]]}
-                   :dev {:plugins [[lein-codox "0.9.0"]]
-                         :codox {:source-paths ["src/clojure"]}}
-                   ;; this version of clj-http depends on HTTPCore 4.2.x which
-                   ;; some projects (e.g. using Spring's RestTemplate) can rely on,
-                   ;; so we test for compatibility with it. MK.
-                   :cljhttp076 {:dependencies [[clj-http "0.7.6"]]}}
+                   :master {:dependencies [[org.clojure/clojure "1.10.0-master-SNAPSHOT"]]}
+                   :dev {:plugins [[lein-codox "0.10.3"]]
+                         :codox {:source-paths ["src/clojure"]}}}
   :codox {:src-dir-uri "https://github.com/michaelklishin/neocons/blob/master/"
           :src-linenum-anchor-prefix "L"}
 
-  :aliases      {"all" ["with-profile" "dev:dev,1.8:dev,master:dev,cljhttp076"]}
+
+  :aliases        {"all" ["with-profile" "dev:dev,1.8:dev,master"]}
+
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
                              :snapshots false
                              :releases {:checksum :fail :update :always}}

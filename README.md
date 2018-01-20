@@ -49,8 +49,8 @@ To subscribe for announcements of releases, important changes and so on, please 
 
 ## Project Maturity
 
-Neocons is not a young project: first released in October 2011, it is over 3
-years old, with active production use from week 1.
+Neocons is not a young project: first released in October 2011, it's been
+in production use from week 1.
 
 It now supports Neo4j 3.x & 2.x release(s) and the API is stable. Documentation
 is in good shape, too.
@@ -155,6 +155,15 @@ all supported Clojure versions using
 Then create a branch and make your changes on it. Once you are done with your changes and all tests pass, submit
 a pull request on Github.
 
+The tests require a Neo4j on localhost on port 7474. An easy way to
+arrange for this if you do not generally run a local server may be to
+use docker:
+
+`docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data neo4j`
+
+and pass the default credentials to lein on the command line
+
+`NEO4J_LOGIN=neo4j NEO4J_PASSWORD=admin lein test`
 
 ## License
 

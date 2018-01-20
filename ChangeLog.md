@@ -1,3 +1,38 @@
+## Changes between Neocons 3.2.0 and 3.3.0 (unreleased)
+
+### Clojure 1.8
+
+Neocons now depends on `org.clojure/clojure` version `1.9.0`. It is
+still compatible with Clojure 1.8 and if your `project.clj` depends on
+a different version, it will be used, but 1.9 is the default now.
+
+### Neo4J Java Driver Upgrade
+
+Neo4J Java driver dependency has been updated to `1.5.0`.
+
+### clj-http Upgrade
+
+clj-http dependency has been updated to `3.7.0`.
+
+### Cheshire Upgrade
+
+Cheshire dependency has been updated to `5.8.0`.
+
+
+
+
+## Changes between Neocons 3.1.0 and 3.2.0 (Jan 18th, 2018)
+
+### Neo4J Bolt Protocol Support
+
+GitHub issue: [#89](https://github.com/michaelklishin/neocons/pull/89)
+
+### Neo4J 3.2 Support
+
+Neocons now supports Neo4J Server 3.2.
+
+
+
 ## Changes between Neocons 3.0.0 and 3.1.0
 
 ### Neo4J 2.2: Ability to Change Password
